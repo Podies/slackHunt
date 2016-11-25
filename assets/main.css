@@ -1,0 +1,281 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', 'sans-serif';
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.grid {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+[class*="col-"] {
+	width: 100%;
+	float: left;
+	min-height: 1px;
+}
+
+.grid:before,
+.row:before,
+.grid:after,
+.row:after {
+	content: "";
+	display: table;
+}
+
+.grid:after,
+.row:after {
+	clear: both;
+}
+
+.col {
+	padding: 0 1em 0 1em;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+			.col-wd-1{width: 8.3334%;}
+		  .col-wd-2{width: 16.6667%;}
+		  .col-wd-3{width: 25%;}
+      .col-wd-4{width: 33.3334%;}
+      .col-wd-5{width: 41.6667%;}
+      .col-wd-6{width: 50%;}
+      .col-wd-7{width: 58.3334%;}
+      .col-wd-8{width: 66.6667%;}
+      .col-wd-9{width: 75%;}
+      .col-wd-10{width: 83.3334%;}
+      .col-wd-11{width: 91.6667%;}
+      .col-wd-12{width: 100%;}
+		}
+
+/*=================================================================
+Typography
+=================================================================*/
+
+.brand h1 {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: 100;
+}
+
+.categories-tab p {
+	display: inline;
+	padding-left: 8%;
+}
+
+.header h2 {
+	display: inline;
+	color: #afafaf;
+	margin: 0;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.channel-card h1 {
+	color: #26accf;
+	text-align: center;
+	font-weight: 500;
+	margin-top: 0;
+	font-size: 2em;
+}
+
+.channel-card p {
+	font-size: 0.9em;
+	font-weight: 300;
+	color: #4c4c4c;
+	margin: 30px 0 40px 0;
+	padding: 0 5px;
+}
+
+/*==================================================================
+Side-nav
+==================================================================*/
+
+.brand {
+	margin-bottom: 40px;
+}
+
+.side-nav {
+	background: linear-gradient(#26accf, #105799 10%);
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+
+.categories {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.categories li {
+	margin: 18px 0;
+}
+
+a.categories-tab {
+	text-decoration: none;
+	color: white;
+	padding: 10px 5px 10px 10px;
+	display: block;
+	width: 100%;
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+a.categories-tab:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px white;
+	border-radius: 5px;
+	box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.16);
+	transform: translate(0,-6px);
+  transition-delay: 0s !important;
+}
+
+a.categories-tab:active,
+a.categories-tab:focus {
+	color: #105799;
+	background-color: white;
+  border-radius: 5px;
+  
+}
+
+/*===============================================================
+Main Body
+===============================================================*/
+.main-body {
+	background-color: #f0f5f8;
+	padding: 0 32px;
+}
+
+.header {
+	margin-top: 22px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 80%;
+}
+
+.search-bar{
+	border: none;
+	height: 40px;
+	padding: 10px 40px 10px 20px;
+	color: #4c4c4c;
+  font-size: 16px;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  border-radius: 22px;
+  box-shadow: 0 20px 20px rgba(4, 42, 78, 0.08);
+  width: 40%;
+}
+
+.search-bar:focus,
+.search-bar:active {
+	outline: none;
+	animation-name: animatesearch;
+	animation-duration: 400ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-delay: 0.1s; 
+}
+
+@keyframes animatesearch {
+	0% {
+		width: 40%;
+		box-shadow: 0 20px 20px rgba(4, 42, 78, 0.08);
+	}
+  40% {
+  	width: 110%;
+  }
+
+	100% {
+		width: 100%;
+		box-shadow: 0 30px 40px rgba(4, 42, 78, 0.2);
+	}
+}
+
+.search input:placeholder-shown {
+	color: #4c4c4c;;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.search i {
+	padding-right: 12px;
+	color: #afafaf;
+	position: absolute;
+	right: 5px;
+}
+
+/*========================================================
+Card Design
+=========================================================*/
+
+.card-show {
+	margin-top: 2%;
+}
+
+.channel-card {
+	background-color: white;
+	width: 23%;
+	height: 300px;
+	box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
+	margin-left: 2.6%;
+	margin-top: 3%;
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+	padding: 2%;
+}
+
+.channel-card:hover {
+	cursor: pointer;
+	transform: translate(0,-20px);
+  transition-delay: 0s !important;
+  box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.16);
+}
+
+.channel-card:nth-of-type(4n+1) {
+	margin-left: 0;
+}
+
+.channel-button {
+	text-align: center;
+}
+
+.link-to-group {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  color: white;
+  background-color: #26accf;
+  padding: 10px 30px 10px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.2);
+  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.link-to-group:hover,
+.link-to-group:active {
+	box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.3);
+}
+
+
+
+
+
