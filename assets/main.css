@@ -79,10 +79,10 @@ Typography
 
 .header h2 {
 	display: inline;
-	color: #afafaf;
+	color: #969696;
 	margin: 0;
 	font-size: 2em;
-	font-weight: 300;
+	font-weight: 500;
 }
 
 .channel-card h1 {
@@ -91,13 +91,14 @@ Typography
 	font-weight: 500;
 	margin-top: 0;
 	font-size: 2em;
+	margin-bottom: 16px;
 }
 
 .channel-card p {
 	font-size: 0.9em;
 	font-weight: 300;
 	color: #4c4c4c;
-	margin: 30px 0 40px 0;
+	margin: 16px 0 40px 0;
 	padding: 0 5px;
 }
 
@@ -110,11 +111,11 @@ Side-nav
 }
 
 .side-nav {
-	background: -webkit-gradient(linear, left top, left bottom, from(#26accf), color-stop(10%, #105799));
-	background: -webkit-linear-gradient(#26accf, #105799 10%);
-	background: linear-gradient(#26accf, #105799 10%);
-	margin-bottom: -9999px;
-	padding-bottom: 9999px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#26accf), to(#1474ce));
+	background: -webkit-linear-gradient(#26accf, #1474ce);
+	background: linear-gradient(#26accf, #1474ce);
+  position: fixed;
+  height: 100%;
 }
 
 .categories {
@@ -165,6 +166,7 @@ Main Body
 .main-body {
 	background-color: #f0f5f8;
 	padding: 0 32px;
+	margin-left: 16.6667%;
 }
 
 .header {
@@ -173,14 +175,17 @@ Main Body
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-ms-flex-pack: justify;
-	    -webkit-box-pack: justify;
-	    -webkit-justify-content: space-between;
-	        justify-content: space-between;
+	justify-content: space-between;
 	-ms-flex-align: center;
 	    -webkit-box-align: center;
 	    -webkit-align-items: center;
 	        align-items: center;
+}
+
+.right-content {
+	width: 84%;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .search {
@@ -193,7 +198,7 @@ Main Body
 	    -webkit-align-items: center;
 	        align-items: center;
 	position: relative;
-	width: 80%;
+	width: 100%;
 }
 
 .search-bar{
@@ -208,7 +213,7 @@ Main Body
           border-radius: 22px;
   -webkit-box-shadow: 0 20px 20px rgba(4, 42, 78, 0.08);
           box-shadow: 0 20px 20px rgba(4, 42, 78, 0.08);
-  width: 40%;
+  width: 20%;
 }
 
 .search-bar:focus,
@@ -275,6 +280,31 @@ Main Body
 	right: 5px;
 }
 
+.add-yours {
+	width: 16%;
+	text-align: center;
+	border-radius: 20px;
+	margin-left: 10px;
+	text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  background: linear-gradient(#26accf, #1474ce);
+  color: white;
+  font-size: 1em;
+  box-shadow: 0 20px 20px rgba(4, 42, 78, 0.1);
+  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.add-yours:hover {
+	box-shadow: 0 30px 40px rgba(4, 42, 78, 0.3);
+	transform: translateY(-2px);
+}
+
+.add-yours:active {
+  box-shadow: 0 20px 30px rgba(4, 42, 78, 0.3);
+	transform: translateY(2px);
+} 
+
 /*========================================================
 Card Design
 =========================================================*/
@@ -287,23 +317,22 @@ Card Design
 	position: relative;
 	background-color: white;
 	width: 23%;
-	height: 380px;
+	height: 300px;
 	-webkit-box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
 	        box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
 	margin-left: 2.6%;
 	margin-top: 3%;
 	-webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-	padding: 2%;
+	padding: 1.8% 2% 2% 2%;
 }
 
 .channel-card:hover {
-	cursor: pointer;
 	-webkit-transform: translate(0,-20px);
 	    -ms-transform: translate(0,-20px);
 	        transform: translate(0,-20px);
-  -webkit-transition-delay: 0s !important;
-          transition-delay: 0s !important;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
   -webkit-box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.16);
           box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.16);
 }
@@ -318,27 +347,34 @@ Card Design
 
 .link-to-group {
 	position: absolute;
+	width: 70%;
+	margin: 0 0 0 -35%;
 	bottom:  15%;
-	left: 19%;
+	left: 50%;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   font-size: 0.9em;
-  color: white;
-  background-color: #26accf;
+  font-weight: 500;
+  color: #1474ce;
+  background: linear-gradient(#f7f7f7 10%, #dadada);
   padding: 10px 30px 10px 30px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
   -webkit-box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.2);
-          box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.2);
+          box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
   -webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
   transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 
-.link-to-group:hover,
-.link-to-group:active {
+.link-to-group:hover {
+	cursor: pointer;
 	-webkit-box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.3);
-	        box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.3);
+	        box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.16);
+}
+
+.link-to-group:active {
+	cursor: pointer;
+	transform: translateY(2px);
+	box-shadow: 0px 20px 40px rgba(4, 42, 78, 0.2);
 }
 
 
