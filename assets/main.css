@@ -43,7 +43,7 @@ body {
 
 .col {
 	padding: 0 1em 0 1em;
-	overflow: hidden;
+	margin: 12px;
 }
 
 @media screen and (min-width: 320px) {
@@ -61,6 +61,52 @@ body {
       .col-wd-12{width: 100%;}
 		}
 
+@media screen and (min-width: 768px) {
+			.col-md-1{width: 8.3334%;}
+		  .col-md-2{width: 16.6667%;}
+		  .col-md-3{width: 25%;}
+      .col-md-4{width: 33.3334%;}
+      .col-md-5{width: 41.6667%;}
+      .col-md-6{width: 50%;}
+      .col-md-7{width: 58.3334%;}
+      .col-md-8{width: 66.6667%;}
+      .col-md-9{width: 75%;}
+      .col-md-10{width: 83.3334%;}
+      .col-md-11{width: 91.6667%;}
+      .col-md-12{width: 100%;}
+		}
+
+@media screen and (min-width: 1020px) {
+			.col-sm-1{width: 8.3334%;}
+		  .col-sm-2{width: 16.6667%;}
+		  .col-sm-3{width: 25%;}
+      .col-sm-4{width: 33.3334%;}
+      .col-sm-5{width: 41.6667%;}
+      .col-sm-6{width: 50%;}
+      .col-sm-7{width: 58.3334%;}
+      .col-sm-8{width: 66.6667%;}
+      .col-sm-9{width: 75%;}
+      .col-sm-10{width: 83.3334%;}
+      .col-sm-11{width: 91.6667%;}
+      .col-sm-12{width: 100%;}
+		}
+
+@media screen and (min-width: 1560px) {
+			.col-xs-1{width: 8.3334%;}
+		  .col-xs-2{width: 16.6667%;}
+		  .col-xs-3{width: 25%;}
+      .col-xs-4{width: 33.3334%;}
+      .col-xs-5{width: 41.6667%;}
+      .col-xs-6{width: 50%;}
+      .col-xs-7{width: 58.3334%;}
+      .col-xs-8{width: 66.6667%;}
+      .col-xs-9{width: 75%;}
+      .col-xs-10{width: 83.3334%;}
+      .col-xs-11{width: 91.6667%;}
+      .col-xs-12{width: 100%;}
+		}
+
+
 /*=================================================================
 Typography
 =================================================================*/
@@ -70,6 +116,8 @@ Typography
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	font-weight: 100;
+	font-size: 2em;
+
 }
 
 .categories-tab p {
@@ -116,6 +164,7 @@ Side-nav
 	background: linear-gradient(#26accf, #1474ce);
   position: fixed;
   height: 100%;
+  padding: 0 16px;
 }
 
 .categories {
@@ -130,7 +179,7 @@ Side-nav
 a.categories-tab {
 	text-decoration: none;
 	color: white;
-	padding: 10px 5px 10px 10px;
+	padding: 10px 5px 10px 20px;
 	display: block;
 	width: 100%;
 	-webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
@@ -165,8 +214,15 @@ Main Body
 ===============================================================*/
 .main-body {
 	background-color: #f0f5f8;
-	padding: 0 32px;
 	margin-left: 16.6667%;
+}
+
+.main-body > .col {
+  padding: 0;
+}
+
+.main-body > .col > .col {
+	padding: 0;
 }
 
 .header {
@@ -316,15 +372,14 @@ Card Design
 .channel-card {
 	position: relative;
 	background-color: white;
-	width: 23%;
 	height: 300px;
 	-webkit-box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
 	        box-shadow: 0px 20px 20px rgba(4, 42, 78, 0.08);
-	margin-left: 2.6%;
 	margin-top: 3%;
 	-webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-	padding: 1.8% 2% 2% 2%;
+	padding: 8% 8%;
+	margin-top: 20px;
 }
 
 .channel-card:hover {
@@ -337,10 +392,6 @@ Card Design
           box-shadow: 0px 40px 40px rgba(4, 42, 78, 0.16);
 }
 
-.channel-card:nth-of-type(4n+1) {
-	margin-left: 0;
-}
-
 .channel-button {
 	text-align: center;
 }
@@ -349,7 +400,7 @@ Card Design
 	position: absolute;
 	width: 70%;
 	margin: 0 0 0 -35%;
-	bottom:  15%;
+	bottom:  12%;
 	left: 50%;
   text-decoration: none;
   font-size: 0.9em;
