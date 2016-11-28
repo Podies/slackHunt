@@ -16,10 +16,10 @@
   					<h1>Slackhunt</h1>
   				</div>
   				<div>
-						<ul class="categories">
+						<ul class="categories" id="filter">
 					    <li>
 					      <a href="#" class="categories-tab">
-						      <i class="fa fa-globe" aria-hidden="true"></i>
+						      <i class="fa fa-globe"></i>
 						      <p>All</p>
 					      </a>
 					     </li>
@@ -87,7 +87,7 @@
 	    				  <h2>Design</h2>
 	    				  <div class="right-content">
 		    				  <div class="search">
-		    				    <input type="search" name="search-channel" placeholder="Search Channel" class="search-bar"><i class="fa fa-search" aria-hidden="true"></i>
+		    				    <input type="search" name="search-channel" id="searchIt" onkeyup="performSearch()"placeholder="Search Channel" class="search-bar"><i class="fa fa-search" aria-hidden="true"></i>
 		    				  </div>
 		    				  <a href="#" class="add-yours">Add Your's</a>
 	    				  </div>
@@ -95,7 +95,7 @@
 	    			</div>
 	    			<div class="row">
 		    			<div class="card-show">
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>iOS Developers</h1>
 			    					<p>A Slack community for iOS developers with 12,000 members (and counting!)</p>
@@ -104,7 +104,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Hackerx</h1>
 			    					<p>HackerX is chat community of hackers and makers from all over the world to facilitate networking, Q&ampA's, feedback and more. It's like StackOverflow, but not really. :).</p>
@@ -113,7 +113,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>DevDK</h1>
 			    					<p>Dansk digitalt community — Arrangør af One Day Out, stifter af #devdk — For et bedre community i Danmark</p>
@@ -122,7 +122,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Android United</h1>
 			    					<p>Android United is a friendly Slack community of professional Android developers.At the moment we unite more than 1100 people from all over the world.</p>
@@ -131,7 +131,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>OpenBazaar</h1>
 			    					<p>Join OpenBazaar on Slack.</p>
@@ -140,7 +140,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Tech Masters</h1>
 			    					<p>Connect with fellow Technologists & Founders, Get help with coding problems, Discuss your startup goals and Learn new skills</p>
@@ -149,7 +149,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Hack Cancer</h1>
 			    					<p>Hack Cancer is a non-profit organisation which is run by a small team of hackers. Put simply its a Cancer Hackathon.</p>
@@ -158,7 +158,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#frontend Developers</h1>
 			    					<p>Talk to the other frontend devs.Learn from others and ask questions.Share your work and find gigs.</p>
@@ -167,7 +167,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Larachat</h1>
 			    					<p>Laravel Slack Chat for Web Artisans</p>
@@ -176,7 +176,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Ember Community</h1>
 			    					<p>All things Emberjs are discussed, including help, addons, user groups, releases, conferences, and more!</p>
@@ -185,7 +185,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Ember Community</h1>
 			    					<p>All things Emberjs are discussed, including help, addons, user groups, releases, conferences, and more!</p>
@@ -194,7 +194,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Ruby Developers</h1>
 			    					<p>Ruby programming language code and discussion.</p>
@@ -203,7 +203,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Devanz</h1>
 			    					<p>Developers of AU & NZ + friends</p>
@@ -212,7 +212,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Angular Buddies</h1>
 			    					<p>A Slack channel with 1000+ top programmers/noobs all passionate about AngularJS.</p>
@@ -221,7 +221,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#SAP</h1>
 			    					<p>A community of experts, consultants, developers, mentors and students using SAP.</p>
@@ -230,7 +230,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Tech London</h1>
 			    					<p>Connect immediately with creative entrepreneurs, startups, investors, design agencies, internet marketers & freelancers - all the main movers and shakers in Tech Citys</p>
@@ -239,7 +239,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Android Chat</h1>
 			    					<p>Talk to some of the best Android minds on the web today.</p>
@@ -248,7 +248,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#Botmakers</h1>
 			    					<p>We are artists, journalists, educators, tinkerers, bot enthusiasts and seasoned pros who make and share friendly, useful, and artistic online bots for Twitter, Slack, and other networks.</p>
@@ -257,7 +257,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#Reactiflux</h1>
 			    					<p>A Slack community for React JavaScript Library (including Flux, React Native, etc)</p>
@@ -266,7 +266,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>SAAS ALliance</h1>
 			    					<p>A invite only community for SaaS founders & professionals. Established to exchange knowledge, ideas and best practices.</p>
@@ -275,7 +275,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>SlashRocket</h1>
 			    					<p>A community of over 1,000 developers of all backgrounds</p>
@@ -284,7 +284,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#testing</h1>
 			    					<p>If you're a QA, Engineer, Product Manager, designer or any person dealing with testing software/hardware, let's chat!</p>
@@ -293,7 +293,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Wordpress</h1>
 			    					<p>A Wordpress community open for everyone for all type of communications.</p>
@@ -302,7 +302,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Tech404</h1>
 			    					<p>A group of chat channels for Atlanta area developers, designers, marketers, business people, hobbyists, students, and other professionals involved in technology.</p>
@@ -311,7 +311,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Ghost</h1>
 			    					<p>Chat in real time with 6327 awesome Ghost developers & users in the community</p>
@@ -320,7 +320,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Open Data Community</h1>
 			    					<p>A community of tech guys that support open data.</p>
@@ -329,7 +329,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#700</h1>
 			    					<p>The strongest latino community of entrepreneurs,startups and founders.</p>
@@ -338,7 +338,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Telescope</h1>
 			    					<p>A community of Telescope App.</p>
@@ -347,7 +347,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Women In Technology</h1>
 			    					<p>A safe, confidential space for women who work in technology to chat and support each other.</p>
@@ -356,7 +356,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>moltin</h1>
 			    					<p>A group whose mission is to make commerce more flexible for everyone.</p>
@@ -365,7 +365,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Noders</h1>
 			    					<p>A group of developers who love Node.js and JS.</p>
@@ -374,7 +374,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>CRO Tricks</h1>
 			    					<p>Learn and share Conversion Rate Optimization tsricks.</p>
@@ -383,7 +383,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>JS Belgrade</h1>
 			    					<p>Community of JS developers.Learn,discuss & share.</p>
@@ -392,7 +392,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>WelearnJS Group</h1>
 			    					<p>Growth is never by mere chance; it is the result of forces working together.</p>
@@ -401,7 +401,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Learn Slack</h1>
 			    					<p>Leanr Slack on Slack :)</p>
@@ -410,7 +410,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Elixir</h1>
 			    					<p>A community to learn Elixir</p>
@@ -419,7 +419,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Internet of Things</h1>
 			    					<p>Construct and know Internet of Things</p>
@@ -428,7 +428,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Growth Hackers</h1>
 			    					<p>If you're a Growth Hacker, we'd love to have you be a part of the community</p>
@@ -437,7 +437,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Ruby on Rails</h1>
 			    					<p>We are a community of Ruby on Rails developers from all over the world.</p>
@@ -446,7 +446,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>GIS Developers and Analysts</h1>
 			    					<p>A community of over 1500 geospatial enthusiasts: developers, GIS professionals, students, and hobbyists all coming together.</p>
@@ -455,7 +455,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Tashkent Developers</h1>
 			    					<p>The developer community linked by a common culture, ready to share their experience and knowledge.</p>
@@ -464,7 +464,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>Slack Lernen</h1>
 			    					<p>The free community for tips and tricks on the subject of 'Slack' to learn!</p>
@@ -473,7 +473,7 @@
 			    					</div>
 			    				</div>
 			    				</div>
-                <div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+                <div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#CodeNewbie</h1>
 			    					<p>Join in on the discussion with fellow Code Newbies.</p>
@@ -482,7 +482,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card technology">
 			    					<h1>#CodeNewbie</h1>
 			    					<p>Join in on the discussion with fellow Code Newbies.</p>
@@ -491,7 +491,7 @@
 			    					</div>
 		    				  </div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Focus Asia</h1>
 			    					<p>Connect and live-chat with community of like-minded professionals from the tech/startup scene in Asia</p>
@@ -500,7 +500,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#startup</h1>
 			    					<p>Give and get feedback and share your thoughts with over 5000 other startup founders, investors, press and talent.</p>
@@ -509,7 +509,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Launch</h1>
 			    					<p>A place to collaborate, discuss new products, find work, get feedback, or even find a co-founder.</p>
@@ -518,7 +518,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Bootstrapped Chat</h1>
 			    					<p>Think of it like the old-school IRC channels.</p>
@@ -527,7 +527,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#smallbiz</h1>
 			    					<p>A chat community for small businesses</p>
@@ -536,7 +536,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>eCommTalk</h1>
 			    					<p>It's a place for Shopify enthusiasts to get answers to questions, network with others and make lasting relationships.</p>
@@ -545,7 +545,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Online Geniuses</h1>
 			    					<p>Internet Marketing Community</p>
@@ -554,7 +554,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#freelance</h1>
 			    					<p>Connect with other freelancers and start sharing your stories, experiences and knowledge with people from across the globe!</p>
@@ -563,7 +563,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#FemaleFounders</h1>
 			    					<p>JOIN HUNDREDS OF FEMALE FOUNDERS AROUND THE WORLD.</p>
@@ -572,7 +572,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>PM HQ</h1>
 			    					<p>Join 2,600+ product people in the world’s first and largest Slack product community!</p>
@@ -581,7 +581,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Mod Talk</h1>
 			    					<p>Welcome to ModTalk for people who run or mod Slack communities. Join our 300+ members who are collaborating to make each community a better place.</p>
@@ -590,7 +590,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Equity Directory</h1>
 			    					<p>An invite-only network of entrepreneurs and startup talent exchanging work for equity.</p>
@@ -599,7 +599,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#people</h1>
 			    					<p>A chat community for people ops, hr professionals, building better companies and managing humans</p>
@@ -608,7 +608,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    			  <div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    			  <div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Product Hunt Global</h1>
 			    					<p>Join the Product Hunt Global Slack Community to Host or Attend a Meetup</p>
@@ -617,7 +617,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>FoundedX</h1>
 			    					<p>It is a tribute to all innovative startups worldwide that are proud of their local roots.</p>
@@ -626,7 +626,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>ModX</h1>
 			    					<p></p>
@@ -635,7 +635,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Startup604</h1>
 			    					<p>A slack community for Vancouver Startups</p>
@@ -644,7 +644,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>CreativeRussia</h1>
 			    					<p>The Russian-speaking community for creative professionals in the industry - the entire design salt, technology, media and startups</p>
@@ -653,7 +653,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>VC Club</h1>
 			    					<p>We're a group of VCs, angels, advisors, and founders discussing things like fundraising, market opportunities & trends, deal intelligence, sourcing & events, and investment theses/frameworks.</p>
@@ -662,7 +662,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Real Estate Growth Hackers</h1>
 			    					<p>Join Our Growing Real Estate Marketing Community.To Chat Leads, Conversions And Closing.</p>
@@ -671,7 +671,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Online Careerists</h1>
 			    					<p>Are you a remote worker doing real work online? Or are you hoping to be one? Join us to chat about remote worker life.work</p>
@@ -680,7 +680,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Smart Website Marketing</h1>
 			    					<p>Learn about blogging, social media, SEO, branding, and more from both the founder of Smart Website Marketing and the community surrounding it.</p>
@@ -689,7 +689,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Paperless Pioneers</h1>
 			    					<p>Join us to be a Paperless Pioneer.</p>
@@ -698,7 +698,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Kreative France</h1>
 			    					<p>The Francophone community for creative professionals in the industry - all aspects of the design, technology, software, media and start-ups</p>
@@ -707,7 +707,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Barcelona Startup</h1>
 			    					<p>Community for all Barcelona startups and entrepreneurs</p>
@@ -716,7 +716,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Finances</h1>
 			    					<p></p>
@@ -725,7 +725,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Women In Sales</h1>
 			    					<p>We are a community for women who work in sales. Connect with other sales women to learn from each other and empower each other.</p>
@@ -734,7 +734,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>Ireland Startuo</h1>
 			    					<p>The place to meet and discuss about all things startup related. All are welcome, North or South of the border!</p>
@@ -743,7 +743,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card business">
 			    					<h1>#Blacklinks</h1>
 			    					<p>Engage with website owners, bloggers, industry leaders from around the world.</p>
@@ -752,7 +752,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card gaming">
 			    					<h1>#Gaming</h1>
 			    					<p>The best community of gammers of all kind.</p>
@@ -761,7 +761,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card gaming">
 			    					<h1>Playwell Space</h1>
 			    					<p>A home for new and aspiring game makers, and the developers who want to help them.</p>
@@ -770,7 +770,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card gaming">
 			    					<h1>#MTG</h1>
 			    					<p>A chat group for everything Magic The Gathering.</p>
@@ -779,7 +779,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card gaming">
 			    					<h1>Game Development</h1>
 			    					<p>Slack group for anyone interested or working in game development.</p>
@@ -788,7 +788,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card television">
 			    					<h1>Hashtag-Episodes</h1>
 			    					<p>Community of people who are interested in watching TV series.</p>
@@ -797,7 +797,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Team Sketch</h1>
 			    					<p>A community for Sketch Designers.</p>
@@ -806,7 +806,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Designer Hangout</h1>
 			    					<p>Join 7500+ UX designers and researchers from around the world to discuss user experience in the UX Slack community.</p>
@@ -815,7 +815,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Design Talks</h1>
 			    					<p>We talk about UI/UX Design, Web Design, Illustrations, freelancing, Design critiques, give each other feedbacks. Learn from others, teach others what you already know.</p>
@@ -824,7 +824,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Craft</h1>
 			    					<p>Join 3,306 fellow Craft users in the official Craft Slack group.It’s open 24 hours a day, 7 days a week!</p>
@@ -833,7 +833,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Designers Unite</h1>
 			    					<p>a place for graphic designers to share, inspire (and vent)</p>
@@ -842,7 +842,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card design">
 			    					<h1>Spec</h1>
 			    					<p>Come chat with our community of 5,000+ designers and developers!</p>
@@ -851,7 +851,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card movies">
 			    					<h1>Movie Geeks</h1>
 			    					<p>Hang out and chat about movies, or film, or film/movie related stuff. Topics include podcasts, netflix and other streaming services.</p>
@@ -860,7 +860,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>#music</h1>
 			    					<p>Connect with artists, music industry professionals, and developers making your favorite music apps.</p>
@@ -869,7 +869,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>Beats1</h1>
 			    					<p>Fan site for Apple Music and Beats1 Radio. Share iTunes links directly on our site.</p>
@@ -878,7 +878,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>The Spoken Word</h1>
 			    					<p>Fan site for Apple Music and Beats1 Radio. Share iTunes links directly on our site.</p>
@@ -887,7 +887,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>Music Festivals</h1>
 			    					<p>Slack for music festival enthusiasts. It is a place to talk about all things festivals. We have channels for Coachella, EDC, and much more.</p>
@@ -896,7 +896,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>Guitar Talk</h1>
 			    					<p>Anything to do with guitars? If yes, then you are at the right place.</p>
@@ -905,7 +905,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card music">
 			    					<h1>Radio Slack</h1>
 			    					<p>Find,share & suggest music among people who are carzy about music.</p>
@@ -914,7 +914,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>#introverts</h1>
 			    					<p>Introverts like to chat too - just in our own way. Skip the small talk and engage in some meaningful discourse... in your own time and space :)</p>
@@ -923,7 +923,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Slack Roulette</h1>
 			    					<p>It's time for talky! Join the #slackroulette community and anonymously chat to slackers from anywhere.</p>
@@ -932,7 +932,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>WorkFrom Anywhere</h1>
 			    					<p>Connect directly with fellow remote workers, freelancers, entrepreneurs and distributed companies all over the world.</p>
@@ -941,7 +941,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Street Workout Chat</h1>
 			    					<p>Connect with us we are as freaking as you are about extreme level of street workouts.</p>
@@ -950,7 +950,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Hashtag teachers</h1>
 			    					<p>Connect with Teachers around the world</p>
@@ -959,7 +959,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Chiang Mai Nomads</h1>
 			    					<p>A community of developers & other creative people who dwell in Chiang Mai Island.</p>
@@ -968,7 +968,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    			  <div class="col channel-card social">
 			    					<h1>Coffee Talk</h1>
 			    					<p>Slack channel/group/community for people to come and discuss all things coffee. We discuss espresso, cold brew, grinders, roasting, pour over, beans, and other related topics.</p>
@@ -977,7 +977,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Gopher Academy</h1>
 			    					<p>Go programming language enthusiasts, join us!</p>
@@ -986,7 +986,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Creative Tribes</h1>
 			    					<p>Share tribe-building strategies, experiences and resources with 750+ startup entrepreneurs, marketers, and other creatives. </p>
@@ -995,7 +995,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Psychedelic Chat</h1>
 			    					<p>Join psychedelic researchers, therapists, explorers and advocates to discuss</p>
@@ -1004,7 +1004,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Culture Amps</h1>
 			    					<p>Are you a People Geek? Join our Slack Channel and start geeking out!</p>
@@ -1013,7 +1013,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Side Project</h1>
 			    					<p>Find collaborators or join side projects</p>
@@ -1022,7 +1022,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Lemonaid</h1>
 			    					<p>Join a community of strong, powerful women. No judgement - just love.</p>
@@ -1031,7 +1031,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Buffer Community</h1>
 			    					<p>Our real-time home for sharing resources and meeting friends.</p>
@@ -1040,7 +1040,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card social">
 			    					<h1>Marketers Chat</h1>
 			    					<p>The Affiliate Marketers Real-Time Chat community in a Slack chat.</p>
@@ -1049,7 +1049,7 @@
 			    					</div>
 			    				</div>
 		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12">
+		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
 			    				<div class="col channel-card health">
 			    					<h1>Health Coaches</h1>
 			    					<p></p>
@@ -1065,5 +1065,6 @@
     	</div>
     </div>
     <script src="https://use.fontawesome.com/306efd2e67.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
