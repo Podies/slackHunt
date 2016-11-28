@@ -22,6 +22,7 @@ var filter = document.getElementById('filter');
 
 filter.addEventListener('click', function (e){
   var button = e.target.innerText.toLowerCase().trim();
+  document.getElementById('categoryName').innerHTML = button;
   var cardDiv = document.querySelectorAll('#slack-card');
     for (var i = 0; i < cardDiv.length; i++) {
       if (button == "all") {
