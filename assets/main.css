@@ -99,7 +99,6 @@ body {
 
 	.header h2 {
 		font-size: 1.6em !important;
-    text-transform: capitalize;
 	}
 
 	.search-bar {
@@ -315,14 +314,15 @@ Typography
 	margin: 0;
 	font-size: 2em;
 	font-weight: 500;
+	text-transform: capitalize;
 }
 
 .channel-card h1 {
 	color: #53C5B2 ;
 	text-align: center;
-	font-weight: 500;
+	font-weight: 300;
 	margin-top: 0;
-	font-size: 2em;
+	font-size: 1.6em;
 	margin-bottom: 16px;
 }
 
