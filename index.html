@@ -10,6 +10,17 @@
     <title>Slackhunt</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
+    <!-- Google Analythics Starts-->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			 ga('create', 'UA-88171432-1', 'auto');
+			 ga('send', 'pageview');
+		</script>
+		<!-- Ends -->
   </head>
   <body>
     <div class="container">
@@ -20,63 +31,63 @@
   					<h1>Slackhunt</h1>
   				</div>
   				<div>
-						<ul class="categories" id="filter">
+						<ul class="categories">
 					    <li>
-					      <a href="#" class="categories-tab">
+					      <a href="#" class="categories-tab" data-filter="all">
 						      <i class="fa fa-globe"></i>
 						      <p>All</p>
 					      </a>
 					     </li>
 					    <li>
-					      <a href="#" class="categories-tab">
+					      <a href="#" class="categories-tab" data-filter="business">
 							    <i class="fa fa-briefcase" aria-hidden="true"></i>
 							    <p>Business</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="technology">
 							    <i class="fa fa-laptop" aria-hidden="true"></i>
 							    <p>Technology</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="gaming">
 							    <i class="fa fa-gamepad" aria-hidden="true"></i>
 							    <p>Gaming</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="television">
 							    <i class="fa fa-television" aria-hidden="true"></i>
 							    <p>Television</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="design">
 							    <i class="fa fa-pencil" aria-hidden="true"></i>
 							    <p>Design</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="movies">
 							    <i class="fa fa-film" aria-hidden="true"></i>
 							    <p>Movies</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="music">
 							    <i class="fa fa-music" aria-hidden="true"></i>
 							    <p>Music</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="social">
 							    <i class="fa fa-share-alt" aria-hidden="true"></i>
 							    <p>Social</p>
 						    </a>
 					    </li>
 					    <li>
-						    <a href="#" class="categories-tab">
+						    <a href="#" class="categories-tab" data-filter="health">
 							    <i class="fa fa-medkit" aria-hidden="true"></i>
 							    <p>Health</p>
 						    </a>
@@ -88,12 +99,12 @@
     			<div class="col">
 	    			<div class="col">
 	    			  <div class="header">
-	    				  <h2 id="categoryName">All</h2>
+	    				  <h2 id="categoryName"></h2>
 	    				  <div class="right-content">
 		    				  <div class="search">
 		    				    <input type="search" name="search-channel" id="searchIt" onkeyup="performSearch()"placeholder="Search Channel" class="search-bar"><i class="fa fa-search" aria-hidden="true"></i>
 		    				  </div>
-		    				  <a href="#" class="add-yours">Add Your's</a>
+		    				  <a href="https://iankit17.typeform.com/to/Y1SlsX" target="_blank" class="add-yours">Submit</a>
 	    				  </div>
 	    				</div>
 	    			</div>
@@ -177,15 +188,6 @@
 			    					<p>Laravel Slack Chat for Web Artisans</p>
 			    					<div class="channel-button">
 			    					  <a href="https://larachat.co/join" class="link-to-group" target="_blank">Join Request</a>
-			    					</div>
-			    				</div>
-		    				</div>
-		    				<div class="col-xs-3 col-sm-4 col-md-6 col-wd-12" id="slack-card">
-			    				<div class="col channel-card technology">
-			    					<h1>Ember Community</h1>
-			    					<p>All things Emberjs are discussed, including help, addons, user groups, releases, conferences, and more!</p>
-			    					<div class="channel-button">
-			    					  <a href="http://ember-community-slackin.herokuapp.com/" class="link-to-group" target="_blank">Join Request</a>
 			    					</div>
 			    				</div>
 		    				</div>

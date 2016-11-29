@@ -18,10 +18,10 @@ function performSearch() {
   }
 }
 
-var filter = document.getElementById('filter');
-
-filter.addEventListener('click', function (e){
-  var button = e.target.innerText.toLowerCase().trim();
+var filter = document.getElementsByClassName('categories-tab');
+for (var i = 0; i < filter.length; i++) {
+  filter[i].addEventListener('click', function (){
+  var button = this.getAttribute('data-filter');
   document.getElementById('categoryName').innerHTML = button;
   var cardDiv = document.querySelectorAll('#slack-card');
     for (var i = 0; i < cardDiv.length; i++) {
@@ -29,7 +29,7 @@ filter.addEventListener('click', function (e){
         cardDiv[i].style.display = "";
       }else {
         var div = cardDiv[i].getElementsByTagName("div")[0];
-        var hasClass = div.classList.contains(button);
+        var hasClass = (" " + div.className + " ").indexOf(button) > -1;
           if (hasClass == false) {
             cardDiv[i].style.display = "none";
           } else {
@@ -38,3 +38,4 @@ filter.addEventListener('click', function (e){
         }
     }
 });
+}
