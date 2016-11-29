@@ -22,7 +22,6 @@ var filter = document.getElementsByClassName('categories-tab');
 for (var i = 0; i < filter.length; i++) {
   filter[i].addEventListener('click', function (){
   var button = this.getAttribute('data-filter');
-  console.log(button)
   document.getElementById('categoryName').innerHTML = button;
   var cardDiv = document.querySelectorAll('#slack-card');
     for (var i = 0; i < cardDiv.length; i++) {
