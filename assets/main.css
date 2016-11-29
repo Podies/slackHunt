@@ -187,6 +187,10 @@ body {
         -ms-transform: none !important;
             transform: none !important;
 	}
+
+	.card-show {
+		margin-top: 120px !important;
+	}
 }
 
 @media screen and (max-width: 1100px) {
@@ -253,15 +257,8 @@ body {
 		padding: 0 !important;
 	}
 
-	.col {
-		padding: 0 !important;
-		margin-left: 1% !important ;
-		margin-bottom: 1% !important;
-		margin-right: 1% !important;
-	}
-
 	.search-bar {
-		width: 93vw !important;
+		width: 70vw !important;
 	}
 
 	.right-content {
@@ -284,7 +281,11 @@ body {
 	}
 
 	.logo {
-		visibility: hidden;
+		width: 70%;
+	}
+
+	.card-show {
+		margin-top: 150px !important;
 	}
 }
 
@@ -412,11 +413,21 @@ Main Body
 }
 
 .main-body > .col > .col {
+	margin: 0 12px;
 	padding: 0;
+	padding-top: 14px;
+  padding-bottom: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f7f7f7;
+  transform: translateX(-24px);
+  z-index: 100;
+  box-shadow: 2px 0 20px rgba(0,0,0,0.06);
 }
 
+
 .header {
-	margin-top: 24px;
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -429,6 +440,8 @@ Main Body
 	    -webkit-box-align: center;
 	    -webkit-align-items: center;
 	        align-items: center;
+	width: 83.334%;
+	padding: 0 24px;
 }
 
 .right-content {
@@ -569,12 +582,23 @@ Main Body
 	        transform: translateY(2px);
 } 
 
+.fixed-footer {
+  text-align: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.small {
+	color: #999;
+	font-size: 0.8em;
+	font-weight: 500;
+}
 /*========================================================
 Card Design
 =========================================================*/
 
 .card-show {
-	margin-top: 2%;
+	margin-top: 60px;
 }
 
 .channel-card {
