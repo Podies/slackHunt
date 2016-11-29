@@ -99,6 +99,7 @@ body {
 
 	.header h2 {
 		font-size: 1.6em !important;
+    text-transform: capitalize;
 	}
 
 	.search-bar {
